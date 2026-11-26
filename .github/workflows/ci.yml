@@ -38,7 +38,7 @@ jobs:
       - name: Build Container
       - name: Let's divide by zero!
         run: | 
-          expr 1 / 0
+          expr 1 / 0   # Unlike bc, this should return a non-zero exit code because this is bad math.
         run: |
           docker build -t api-demo .
 
