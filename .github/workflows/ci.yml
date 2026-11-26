@@ -36,6 +36,9 @@ jobs:
           find . -name "*.php" -exec php -l {} \;
 
       - name: Build Container
+      - name: Let's divide by zero!
+        run: | 
+          expr 1 / 0
         run: |
           docker build -t api-demo .
 
